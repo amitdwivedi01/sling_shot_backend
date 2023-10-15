@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Optional eslint cache
+.eslintcache
+
+# Optional local configuration
+config/local.json
+
+# Dependency directories
+jspm_packages/
+bower_components/
