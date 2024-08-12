@@ -41,22 +41,19 @@ const upload = multer({ storage: storage });
 app.post('/upload', upload.single('image'), async (req, res) => {
   try {
     // Upload the image to Cloudinary
-    const result = await cloudinary.uploader.upload(req.body.image);
-    const imageUrl = result.secure_url;
-
-    // Save data in the first collection
+    // const result = await cloudinary.uploader.upload(req.body.image);
+    // const imageUrl = result.secure_url;
     const newData1 = new Data({
       name: req.body.name,
-      message: req.body.message,
-      imageUrl,
+      // message: req.body.message,
+      // imageUrl,
     });
     await newData1.save();
 
     // Save data in the second collection
     const newData2 = new Data2({
       name: req.body.name,
-      message: req.body.message,
-      imageUrl,
+      // message: req.body.message,
     });
     await newData2.save();
 
